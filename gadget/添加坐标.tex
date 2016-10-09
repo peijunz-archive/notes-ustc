@@ -1,0 +1,22 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{zpj}
+\usepackage{tikz}
+\include{graphisx}
+%\geometry{left=1cm,right=1cm}
+\begin{document}
+\pagestyle{empty}
+\Large
+\begin{tikzpicture}
+ \pgfsetxvec{\pgfpoint{1cm}{0}}
+ \pgfsetyvec{\pgfpoint{0}{1cm}}
+\node[inner sep=0pt] at (3.2,-2.4) {\includegraphics[width=6.4cm]{去噪点.png}};
+\draw[->, thick] (0,0)--(6.6,0)node[below]{$y$};
+\draw[->, thick] (0,0)--(0,-5.0)node[right]{$x$};
+  \foreach \x [evaluate=\x as \xeval using 100*\x] in {0,1.6,...,6.5}{
+  \draw (\x,0)node[above]{\pgfmathprintnumber{\xeval}}--(\x,2pt);
+  }  
+  \foreach \y [evaluate=\y as \yy using 100*\y] in {0,1.2,...,4.9}{
+  \draw (0,-\y)node[left,small]{\pgfmathprintnumber{\yy}}--(-2pt,-\y);
+  }
+\end{tikzpicture}
+\end{document}
