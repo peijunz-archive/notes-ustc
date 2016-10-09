@@ -1,0 +1,156 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=1in, right=1in, top=1.5in, bottom=1.5in]{geometry}
+\usepackage{zpj}
+\usepackage{empheq}
+\usepackage{qrcode}
+% \title{\qrcode[hyperlink,height=1in]{https://github.com/peijunz/mathphys/releases}\hspace{1cm}第二次作业参考\thanks{下载地址: \url{https://github.com/peijunz/mathphys/releases}，或直接扫描二维码}}
+\title{作业参考解答}
+\author{章鹤梓}
+\newcommand{\num}[1]{\noindent\fcolorbox{RoyalBlue}{SkyBlue}{#1}~}
+\newcommand{\emp}[1]{{\heiti #1}}
+\begin{document}
+\zihao{-4}
+\maketitle
+\pagestyle{plain}
+\section{第二次作业习题解答}
+\num{1}(1) $\pp u/\pp x=f'(xy)\pp(xy)/\pp x=yf'$，同理$\pp u/\pp y=xf'$。易得结论。
+
+\num{12}(1) 特征方程：
+\begin{equation}
+\frac{\dd x}{y+z}=\frac{\dd y}{z+x}=\frac{\dd z}{x+y}
+\end{equation}
+由合分比定理易得出
+\begin{equation}
+\frac{\dd(x-y)}{x-y}=\frac{\dd(y-z)}{y-z}\quad\Rightarrow \dd\big(\ln(x-y)-\ln(y-z)\big)=0
+\end{equation}
+因此$\dfrac{x-y}{y-z}$是运动积分，同理$\dfrac{z-x}{y-z}$也是积分常数。因此有通解
+\begin{equation}u=u\left(\dfrac{x-y}{y-z},\dfrac{z-x}{y-z}\right)
+\end{equation}
+
+\num{13}(1) 特征方程：
+\begin{equation}
+\dd x_i/\sqrt{x_i}=2\dd\sqrt{x_i}=2\dd\sqrt{x_j}
+\end{equation}
+故对任意$i\neq j$而言$\sqrt{x_i}-\sqrt{x_j}$是积分常数。因此有通解
+\begin{equation}
+u=u(\sqrt x-\sqrt y, \sqrt x-\sqrt z)
+\end{equation}
+代入边值得$u(1-\sqrt y, 1-\sqrt z)=y-z$，因此$u(m,n)=(m-1)^2-(n-1)^2$
+\begin{align}
+u(\sqrt x-\sqrt y, \sqrt x-\sqrt z)&=(\sqrt x-\sqrt y-1)^2-(\sqrt x-\sqrt z-1)^2\\
+&=(\sqrt z-\sqrt y)(2\sqrt x-\sqrt y-\sqrt z-2)\\
+&=y-z+2(\sqrt x-1)(\sqrt z-\sqrt y)
+\end{align}
+
+\num{14}(1) 积分一次得$u=x^2t+f(x)$，代入边值得$f=x^2$故$u=x^2(1+t)$
+
+(2)易得$u=u(at+x)$，代入边值得$u(x)=x^2$故$u=(at+x)^2$
+
+\num{略难的作业} \emp{题目中的光滑不需要分析的过于复杂，只需要分析连续性即可，可微性等不做要求}
+
+(i) 由特征方程$\dd x/y=-\dd y/x$知有首次积分$r=\sqrt{x^2+y^2}$，设另一个变量$\phi=\mathrm{Arg}(x+y\ii)$，则有：
+\begin{equation}
+\left\{
+\begin{aligned}
+x&=r\cos\phi\\
+y&=r\sin\phi
+\end{aligned}
+\right.\quad
+\Rightarrow \pp/\pp \phi=
+\frac{\pp x}{\pp \phi}\frac{\pp}{\pp x}+\frac{\pp y}{\pp \phi}\frac{\pp}{\pp y}=-y\frac{\pp}{\pp x}+x\frac{\pp}{\pp y}
+\end{equation}
+
+因此，若$c\neq 0$，原方程化为$\pp_\phi u-c(u-f/c)=0$，$u$有通解%设$v=u-f/c$，则对应$v$通解为
+\begin{equation}
+u(r,\phi)=g(r)\exp(c\phi)+f/c,\quad c\neq 0
+\end{equation}
+$g(r)$为任意函数。
+
+否则当$c=0$时，方程化为
+\begin{align}
+ \pp_\phi u&=-f\newline\\
+ u&=-f\phi+g(r)
+\end{align}
+
+在$r=0$处，$u$必须与$\phi$无关。得出
+\begin{equation}
+\left\{
+\begin{aligned}
+  g(0)&=0, \quad &c\neq 0\\
+  f&=0, \quad &c=0
+\end{aligned}\right.
+\label{gzero}
+\end{equation}
+
+总之：
+\begin{equation}\boxed{
+\left\{
+\begin{aligned}
+ u(r,\phi)&=g(r)\exp(c\phi)+f/c,\; g(0)=0\quad &c\neq 0\\
+ u(r,\phi)&=g(r)\quad &c=0
+\end{aligned}\right.}
+\end{equation}
+
+\emp{对ii与iii的分析}~全平面内单值的解$u$要满足周期性边界条件$u(r,\phi)=u(r,\phi+2\pi)$。因此需要附加额外条件：
+\begin{equation}
+\left\{
+\begin{aligned}
+ \exp(2\pi c)&=1,\quad c\neq 0\\
+ c&=0
+\end{aligned}
+\right.\quad\Rightarrow c=n\ii, n\in \mathbb{Z}
+\end{equation}
+
+(ii) 在$u$的解非平庸的前提下，为了让$u$是实函数，需要满足$c$为实数。又由于$c=n\ii$的限制，$c=0$，因此$f=0$。
+
+(iii) 此时只需要$c=n\ii$即可，$f$可以是任意复数
+
+(iv) 正负半轴分别对应$\phi=0, \phi=\pi$时的情况，$g(r)$可由任意一边确定下来：
+\begin{equation}
+g(r)=\theta(r)-f/c=(\theta(-r)-f/c)\exp(-c\pi),\quad r\geq 0
+\end{equation}
+前面的等号说明，第一问中$g(r)$需要满足的条件如\ref{gzero}，$\theta(r)-f/c$也需要同时满足；后面的等号就是$\theta(x)$要满足的自洽性要求。
+% \begin{equation}
+% \Rightarrow\boxed{\left\{
+% \begin{aligned}
+%  \frac{\theta(-r)-f/c}{\theta(r)-f/c}&=\exp(c\pi),&\forall r>0\\
+% \theta(0)-f/c&=0,&r=0
+% \end{aligned}
+% \right.}
+% \end{equation}
+\subsection{最后一个题目原点处可微性/光滑性的讨论}
+这小节都是附加内容，不做要求。但是解微分方程采用极坐标/球坐标在原点处是需要经过一些额外讨论的，这是极坐标/球坐标的一种缺陷。前面已经利用原点处的连续性条件得出了\ref{gzero}。这里不讨论$c=0$的简单情形。
+\subsubsection{一阶可微性}\label{1st}
+原点处方向导数
+\begin{equation}
+\frac{\pp u}{\pp \bm n}=\lim_{r\to 0} \frac{u(r\cos\theta,r\sin\theta)}{r-0}=g'(0)\ee^{c\theta},\quad \bm n=(\cos\theta,\sin\theta)
+\end{equation}
+这里利用了$g(0)=0$的条件，而且转换到直角坐标$u=u(x,y)$。因此可以得出：
+\begin{equation}
+u_{x+}=g'(0), \quad u_{y+}=g'(0)\ee^{c\pi/2}
+\end{equation}
+
+可微要求
+\begin{align}
+ \frac{\pp u}{\pp \bm n}&=u_x\cos\theta +u_y\sin\theta \\
+ g'(0)\ee^{c\theta}&=g'(0)(\cos\theta-\sin\theta\ee^{c\pi/2})
+\end{align}
+代入$c=n\ii$得到：
+\begin{equation}
+g'(0)(\ee^{\ii n\theta}-\cos\theta-\sin\theta\ee^{\ii n\pi/2})=0
+\end{equation}
+因此有两种可能：
+\begin{equation}
+\left\{
+\begin{aligned}
+ g'(0)&=0\\
+ n&=\pm 1
+\end{aligned}
+\right.
+\end{equation}
+\subsubsection{光滑性}
+一般情况下容易证明$u=z^n+f/c=r^n\exp(\ii n\phi)+f/c$是$c=\ii n$的时候的解$g=r^n$，而且此时$u$是解析的所以一定满足光滑性要求。但是如果要得到所有解，会有与$n$有关的限制，就像\ref{1st}这种特殊情况一样。
+
+% ，$u(r,0)=\theta(r)\Rightarrow g(r)=\theta(r)-f/c$。对于任意的$(r,\phi)$，只要给定的$\theta(x)$误差足够小，总可以把误差控制下来，因此是稳定的。总而言之，这个解是适定的。
+
+\end{document}
