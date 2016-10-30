@@ -8,19 +8,19 @@
 \maketitle
 \[E_\pm=\frac{kq_\pm}{r_\pm^3}\bm r_\pm,\quad \bm r_\pm=\bm r\pm a\hat z\]
 
-We want to prove \[\frac{kq_+q_-}{2a}=\int\epsilon \bm E_+\cdot \bm E_-\dd V=\frac{kq_+q_-}{4\pi}\int  \frac{\bm r_+\cdot \bm r_-}{r_+^3r_-^3} \dd V\]
+We want to prove \[\frac{kq_+q_-}{2a}=\int\epsilon \bm E_+\cdot \bm E_-\dd V=\frac{kq_+q_-}{4\otherpi}\int  \frac{\bm r_+\cdot \bm r_-}{r_+^3r_-^3} \dd V\]
 
 We choose $a=1$, so:
 \begin{align}
 \int\frac{\bm r_+\cdot \bm r_-}{r_+^3r_-^3}\dd V&=\iiint\frac{r^2-1}{\sqrt{(r^2+1)^2-4r^2\cos^2\theta}^3}r^2\sin\theta \dd r\dd\theta \dd\phi\\
-&=2\pi\int_0^\infty\dd r\int_{-1}^{1}\dd x \frac{r^2(r^2-1)}{[(r^2+1)^2-4r^2x^2]^{3/2}}, \quad x=\cos\theta\\
-&=2\pi\int_0^\infty\dd r\,\frac{r^2(r^2-1)}{(r^2+1)^3} \int_{-1}^1[1-k^2x^2]^{-3/2}\dd x, \quad k=\frac{2r}{r^2+1}\\
-&=2\pi\int_0^\infty\dd r\,\frac{r^2(r^2-1)}{(r^2+1)^3} \frac{2}{\sqrt{1-k^2}}\\
-&=4\pi\int_0^\infty\frac{\dd r}{(r+1/r)^2} \frac{r^2-1}{|r^2-1|}\\
-&=-4\pi\left[\int_0^1\,\frac{\dd r}{(r+1/r)^2}+\int_{\infty}^1\,\frac{\dd r}{(r+1/r)^2}\right]\\
-&=-4\pi\left[\int_0^1\frac{\dd r}{(r+1/r)^2}+\int_0^1\frac{\dd(1/r')}{(r'+1/r')^2}\right],\quad r'=1/r\\
-&=-4\pi \int_\infty^2 \dd t/t^2\\
-&=2\pi
+&=2\otherpi\int_0^\infty\dd r\int_{-1}^{1}\dd x \frac{r^2(r^2-1)}{[(r^2+1)^2-4r^2x^2]^{3/2}}, \quad x=\cos\theta\\
+&=2\otherpi\int_0^\infty\dd r\,\frac{r^2(r^2-1)}{(r^2+1)^3} \int_{-1}^1[1-k^2x^2]^{-3/2}\dd x, \quad k=\frac{2r}{r^2+1}\\
+&=2\otherpi\int_0^\infty\dd r\,\frac{r^2(r^2-1)}{(r^2+1)^3} \frac{2}{\sqrt{1-k^2}}\\
+&=4\otherpi\int_0^\infty\frac{\dd r}{(r+1/r)^2} \frac{r^2-1}{|r^2-1|}\\
+&=-4\otherpi\left[\int_0^1\,\frac{\dd r}{(r+1/r)^2}+\int_{\infty}^1\,\frac{\dd r}{(r+1/r)^2}\right]\\
+&=-4\otherpi\left[\int_0^1\frac{\dd r}{(r+1/r)^2}+\int_0^1\frac{\dd(1/r')}{(r'+1/r')^2}\right],\quad r'=1/r\\
+&=-4\otherpi \int_\infty^2 \dd t/t^2\\
+&=2\otherpi
 \end{align}
 
 \end{document}
