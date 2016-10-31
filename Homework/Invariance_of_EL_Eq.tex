@@ -1,12 +1,12 @@
 \documentclass[12pt]{article}
 \usepackage{zpj}
 \title{Invariance of Euler-Lagrange Equations}
-\author{P\`eij\`un Zh\=u}
+\author{\zpj}
 
 \begin{document}
 \maketitle
 
-E-L is deducted from the Hamilton's principle \[\delta S=\delta\int L(\bm q, \dot{\bm q}, t)dt=0\]
+E-L is deduced from the Hamilton's principle \[\delta S=\delta\int L(\bm q, \dot{\bm q}, t)dt=0\]
 
 It is easy to find that, for $L'=L+\dd f(\bm q, t)/\dd t$ or change of variables $\bm q\to\bm Q$, the min of $\delta S$ will not change. Here we want to prove it the hard way---using E-L equations. 
 
@@ -21,13 +21,13 @@ The original E-L Equations are:
 \]
 
 \section{Condition $L'=L+\dfrac{\dd f(\bm q, t)}{\dd t}$}
-\begin{align*}
+\begin{align}
 \left(\frac{\dd}{\dd t}\frac{\pp}{\pp \dot q_i}-\frac{\pp}{\pp q_i}\right)L'
 &=\left(\frac{\dd}{\dd t}\frac{\pp}{\pp \dot q_i}-\frac{\pp}{\pp q_i}\right)\frac{\dd f}{\dd t}\\
 &=\frac{\dd}{\dd t}\frac{\pp}{\pp q_i}f-\frac{\pp}{\pp q_i}\frac{\dd}{\dd t}f\\
 &=\left[\frac{\dd}{\dd t},\frac{\pp}{\pp q_i}\right]f\\
 &=0
-\end{align*}
+\end{align}
 
 \section{Condition $\bm q\to\bm Q$}
 We we change generalized coordinates $\bm q\to\bm Q$, the Lagrangian:

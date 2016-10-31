@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+\usepackage{zpj}
+\title{From d'Alembert to Lagrange}
+\author{\zpj}
+\begin{document}
+\maketitle
+\paragraph{Statics}
+Principle of Virtual Work (Minimal Potential Energy):
+\[Q\mdef-\frac{\delta V}{\delta q}=\frac{\delta W}{\delta q}=\frac{\bm F_i\cdot\delta \bm x_i}{\delta q}=0\]
+
+\paragraph{Dynamics}
+
+d'Alembert's Principle---Counterpart of Principle of Virtual Work(We have neglected the work for constraints):
+\[\frac{\bm (\bm F_i-m_i\bm a_i)\cdot\delta \bm x_i}{\delta q}=0\]
+
+i.e. 
+\begin{align}
+Q\mdef\bm F_i\cdot\frac{\pp \bm x_i}{\pp q}&=m_i\bm a_i\cdot\frac{\pp \bm x_i}{\pp q}\\
+&=m_i\frac{\dd \bm v_i}{\dd t}\cdot\frac{\pp \bm x_i}{\pp q}\\
+&=m_i\frac{\dd}{\dd t}\left( \bm v\cdot\frac{\pp \bm x_i}{\pp q}\right)-m_i\bm v\cdot\frac{\dd}{\dd t}\frac{\pp}{\pp q}\bm x_i\\
+&=m_i\frac{\dd}{\dd t}\left(\bm v\cdot\frac{\pp \dot{\bm x_i}}{\pp\dot q}\right)-m_i\bm v\cdot\frac{\pp}{\pp q}\frac{\dd}{\dd t}\bm x_i\\
+&=\frac{\dd}{\dd t}\left(m_i\bm v_i\cdot\frac{\pp\bm v_i}{\pp\dot q}\right)-m_i\bm v_i\cdot\frac{\pp \bm v_i}{\pp q}\\
+&=\frac{\dd}{\dd t}\frac{\pp T}{\pp\dot q}-\frac{\pp T}{\pp q}\\
+&=\left(\frac{\dd}{\dd t}\frac{\pp}{\pp\dot q}-\frac{\pp}{\pp q}\right)T\label{T}
+\end{align}
+
+For conservative force,
+\[Q=-\frac{\pp V}{\pp q},\quad \frac{\pp V}{\pp \dot q}=0\]
+\begin{equation}
+\Rightarrow\quad Q=\left(\frac{\dd}{\dd t}\frac{\pp}{\pp\dot q}-\frac{\pp}{\pp q}\right)V\label{V}
+\end{equation}
+
+As a result of Eq. \ref{T} and \ref{V}, if we define $L=T-V$, we have
+\[\left(\frac{\dd}{\dd t}\frac{\pp}{\pp\dot q}-\frac{\pp}{\pp q}\right)L=0\]
+\end{document}
