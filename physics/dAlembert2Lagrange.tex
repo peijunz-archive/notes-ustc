@@ -4,14 +4,27 @@
 \author{\zpj}
 \begin{document}
 \maketitle
-\paragraph{Statics}
-Principle of Virtual Work (Minimal Potential Energy):
-\[Q\mdef-\frac{\delta V}{\delta q}=\frac{\delta W}{\delta q}=\frac{\bm F_i\cdot\delta \bm x_i}{\delta q}=0\]
-
+\section{Nowtonian}
+Assume $\bm F$ is active force and $\bm R$ is constraint force. Then for $i$th body we have Newton's Second Law:
+\[\bm F^\mathrm{tot}_i=\bm F_i+\bm R_i=m\bm a_i\]
+With a virtual displacement $\delta \bm x_i$, we define:
+\[\delta W_i=\bm F^\mathrm{tot}_i\cdot\delta\bm x_i,\quad
+\delta K_i=m\bm a_i\cdot\delta\bm x_i\]
+Then we have $\delta W_i=\delta K_i$. Define
+\[\delta W=\sum_i\delta W_i,\quad\delta K=\sum_i\delta K_i\]
+and obviously\[\delta W=\delta K\]
+As the constraints will not do work, we can rewrite
+\[\delta W=\sum_i\bm F_i\cdot\delta\bm x_i\]
+\section{Lagrangian}
+\paragraph{Statics $\delta K=0$}
+Principle of Virtual Work:
+\[\frac{\delta W}{\delta q}=0\]
+i.e. Minimal Potential Energy
+\[Q\mdef-\frac{\delta V}{\delta q}=0\]
 \paragraph{Dynamics}
 
-d'Alembert's Principle---Counterpart of Principle of Virtual Work(We have neglected the work for constraints):
-\[\frac{\bm (\bm F_i-m_i\bm a_i)\cdot\delta \bm x_i}{\delta q}=0\]
+d'Alembert's Principle---Counterpart of Principle of Virtual Work:
+\[\frac{\delta W}{\delta q}=\frac{\delta K}{\delta q}\]
 
 i.e. 
 \begin{align}
@@ -24,10 +37,10 @@ Q\mdef\bm F_i\cdot\frac{\pp \bm x_i}{\pp q}&=m_i\bm a_i\cdot\frac{\pp \bm x_i}{\
 &=\left(\frac{\dd}{\dd t}\frac{\pp}{\pp\dot q}-\frac{\pp}{\pp q}\right)T\label{T}
 \end{align}
 
-For conservative force,
-\[Q=-\frac{\pp V}{\pp q},\quad \frac{\pp V}{\pp \dot q}=0\]
+For conservative or monogenic system,
+
 \begin{equation}
-\Rightarrow\quad Q=\left(\frac{\dd}{\dd t}\frac{\pp}{\pp\dot q}-\frac{\pp}{\pp q}\right)V\label{V}
+Q=\left(\frac{\dd}{\dd t}\frac{\pp}{\pp\dot q}-\frac{\pp}{\pp q}\right)V\label{V}
 \end{equation}
 
 As a result of Eq.~\ref{T} and \ref{V}, if we define $L=T-V$, we have
