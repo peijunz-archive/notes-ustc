@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{zpj}
+\title{Geometrical Optics in Continuum}
+\author{\zpj}
+\begin{document}
+\maketitle
+\section{Fermat's Principle}
+Fermat's Principle is
+\begin{equation}
+\delta s=\delta\int n\dd \ell=0
+\end{equation}
+If we choose the path connecting two points to be
+\begin{equation}\bm r=\bm r(t),\quad t_0\leq t\leq t_1\end{equation}
+We can write
+\begin{equation}
+s=\int n\frac{\dd \ell}{\dd t}\dd t, \quad \frac{\dd \ell}{\dd t}=|\dot{\bm r}|
+\end{equation}
+The Lagrangian about parameter $t$ is
+\begin{equation}
+L=n\frac{\dd \ell}{\dd t}=n(\bm r)|\bm{\dot r}|
+\end{equation}
+then the Euler-Lagrange Equation is
+\begin{align}
+&\left(\frac{\dd}{\dd t}\frac{\pp}{\pp\bm{\dot r}}-\frac{\pp}{\pp\bm{r}}\right)L=0\\
+\bm p&=\frac{\pp L}{\pp \bm{\dot r}}=n \hat\theta,\quad\hat{\theta}=\frac{\pp |\dot{\bm r}|}{\pp \bm{\dot r}}=\bm{\dot r}/|\bm{\dot r}|\\
+\frac{\dd \bm p}{\dd t}&=\frac{\pp L}{\pp \bm{r}}=\frac{\dd\ell}{\dd t}\nabla n\\
+\frac{\dd \bm p}{\dd \ell}&=\nabla n
+\end{align}
+%i.e. \begin{equation}
+%n\frac{\dd \hat\theta}{\dd \ell}=\nabla n-\hat{\theta}\frac{\dd n}{\dd \ell}=\left(1-\hat{\theta}\hat{\theta}^T\right)\nabla n=\nabla_\perp n\label{tt}
+%\end{equation}
+%also
+%\begin{equation}
+%\frac{\dd \hat\theta}{\dd \ell}=\nabla_\perp n/n=\nabla_\perp \ln n
+%\end{equation}
+\section{Examples}
+\subsection{Parallel Gradient}
+\begin{equation}
+	n(x,y,z)=f(x),\quad\nabla n=f'(x)\hat x
+\end{equation}
+It is obvious that $p_y,p_z$ are conserved.
+\subsection{Central Gradient}
+For a spherical symmetric distribution
+\begin{equation}
+n(\bm r)=f(r),\quad \nabla n=f'(r)\hat r
+\end{equation}
+Define $\bm L=\bm r\times \bm p$,
+\begin{align}
+	\frac{\dd \bm L}{\dd \ell}&=\frac{\dd\bm r}{\dd \ell}\times\bm p+\bm r\times\frac{\dd\bm p}{\dd \ell}
+	\\&=\hat{\theta}\times \bm p+\bm r\times\nabla n
+	\\&=\hat{\theta}\times n\hat{\theta}+\bm r\times f'(r)\hat r
+	\\&=0
+\end{align}
+So $\bm L$ is conserved.
+\end{document}
