@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{zpj}
+\title{Renyi entropy of the wormholes}
+\author{Peijun Zhu}
+\begin{document}
+\maketitle
+The (elementwise) positive matrix
+\begin{equation}
+T_{bc;\alpha}=\sum_ad_a^\alpha N_{ba}^c
+\end{equation}
+is normal as
+\begin{align}\label{key}
+T_{ab}T_{cb}&=\sum_x\sum_y d_x^\alpha d_y^\alpha \sum_b N_{xa}^b N_{yc}^b\\
+&=\sum_x\sum_y d_x^\alpha d_y^\alpha \sum_b N_{x\bar b}^{\bar a} N_{y\bar b}^{\bar c}\\
+&=\sum_x\sum_y d_x^\alpha d_y^\alpha \sum_b  N_{\bar y b}^{c}N_{\bar xb}^{a}\\
+&=T_{ba}T_{bc}
+\end{align}
+Thus, The eigenvectors correspond to distinct eigenvalues must be orthogonal. Assume the eigenvalues and eigenvectors are $\{\lambda_i, \mathbf v_i\}$. The eigenvector $\mathbf v_m=d_i\mathbf e_i, v_m^2=\mathcal{D}^2$ with all components are positive has the max eigenvalue 
+
+\[A_\alpha=\lambda_{m;\alpha}=\sum_a d_a^{\alpha+1}\]
+In this notation, $\mathcal{D}^2=A_1$.
+\begin{equation}
+\mathbf e_1=\sum_i \frac{\mathbf e_1\cdot \mathbf v_i}{\mathbf v_i\cdot \mathbf v_i}\mathbf{v}_i=\sum_i c_i\mathbf v_i,\quad c_m=\frac{\mathbf e_1\cdot \mathbf v_m}{v_m^2}=d_1/\mathcal{D}^2=1/A_1
+\end{equation}
+Define
+\begin{align}
+B_\alpha&=(\mathbf{T}_\alpha^n)_{11}\\
+&=\mathbf{e}_1^T\mathbf{T}_\alpha^n \mathbf{e}_1\\
+&=\sum_i c_i^2v_i^2\lambda_i^n\\
+&=A_\alpha^n/A_1\left[1+\sum_{i\neq m}\frac{c_i^2v_i^2}{c_m^2v_m^2}\left( \frac{\lambda_i}{\lambda_m}\right) ^n\right]
+\end{align}
+So, For $\alpha\in (0,+\infty)$, 
+\begin{align}
+S_{\alpha, n}&=\frac{\log B_\alpha-\alpha(n-1)\log \mathcal{D}^2}{1-\alpha}\\
+&=n\frac{\log A_\alpha-\alpha\log A_1}{1-\alpha}-\log A_1+O(k^n),\quad k<1\label{al}
+\end{align}
+Neglect the last term, we can verify from \ref{al} that 
+\begin{align}
+\lim_{\alpha\to 1}S_{\alpha, n}&=n\left(\log A_1-\sum_a\frac{d_a^2\log d_a}{A_1} \right) -\log A_1\\
+&=2(n-1)\log \mathcal{D}-n\sum_a p_a\log d_a
+\end{align}
+
+In the $\alpha=1$ case, there is no other eigenvector with nonzero nonzero eigenvalue except $d_a$ because $T_{bc}=d_bd_c$. So there is no $O(k^n)$ term in \ref{al}.
+\end{document}
